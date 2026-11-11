@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+
+    <!-- HIDDEN RADIO BUTTONS (these remember which filter is selected) -->
+    <!-- Only one radio with the same name can be checked at a time. -->
+    <!-- They must come BEFORE the filters and the gallery so the CSS can "see" them. -->
+    <input type="radio" name="filter" id="show-all" checked />
+    <input type="radio" name="filter" id="show-landscapes" />
+    <input type="radio" name="filter" id="show-portraits" />
+    <input type="radio" name="filter" id="show-architecture" />
+
+    <!-- FILTER BUTTONS -->
+    <!-- Each label is connected to a radio by for="..." matching the radio's id. -->
+    <!-- Clicking the label selects its radio. -->
+    <div class="filters">
+      <label class="filter-btn" for="show-all">All</label>
+      <label class="filter-btn" for="show-landscapes">Landscapes</label>
+      <label class="filter-btn" for="show-portraits">Portraits</label>
+      <label class="filter-btn" for="show-architecture">Architecture</label>
+    </div>
+
+    <!-- GALLERY: every <div class="card"> is one image card -->
+    <!-- data-category says which filter the card belongs to -->
+    <div class="gallery">
+      <!-- Landscapes -->
+      <div class="card" data-category="landscapes">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/mountain/600/400"
+            alt="Mountain"
+          />
+          <span class="tag">Landscapes</span>
+          <div class="overlay">Mountain peaks glowing at sunrise.</div>
+        </div>
+        <h2>Mountain Sunrise</h2>
+      </div>
+
+      <div class="card" data-category="landscapes">
+        <div class="image-box">
+          <img src="https://picsum.photos/seed/forest/600/400" alt="Forest" />
+          <span class="tag">Landscapes</span>
+          <div class="overlay">A quiet forest in the morning mist.</div>
+        </div>
+        <h2>Misty Forest</h2>
+      </div>
+
+      <div class="card" data-category="landscapes">
+        <div class="image-box">
+          <img src="https://picsum.photos/seed/beach/600/400" alt="Beach" />
+          <span class="tag">Landscapes</span>
+          <div class="overlay">Waves rolling onto an empty beach.</div>
+        </div>
+        <h2>Golden Beach</h2>
+      </div>
+
+      <div class="card" data-category="landscapes">
+        <div class="image-box">
+          <img src="https://picsum.photos/seed/lake/600/400" alt="Lake" />
+          <span class="tag">Landscapes</span>
+          <div class="overlay">A still lake mirroring the sky.</div>
+        </div>
+        <h2>Still Waters</h2>
+      </div>
+
+      <!-- Portraits -->
+      <div class="card" data-category="portraits">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/portrait1/600/400"
+            alt="Smiling woman"
+          />
+          <span class="tag">Portraits</span>
+          <div class="overlay">A warm portrait in natural light.</div>
+        </div>
+        <h2>Natural Smile</h2>
+      </div>
+
+      <div class="card" data-category="portraits">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/portrait2/600/400"
+            alt="Elderly man"
+          />
+          <span class="tag">Portraits</span>
+          <div class="overlay">A lifetime of stories in one face.</div>
+        </div>
+        <h2>The Storyteller</h2>
+      </div>
+
+      <div class="card" data-category="portraits">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/portrait3/600/400"
+            alt="Laughing child"
+          />
+          <span class="tag">Portraits</span>
+          <div class="overlay">A candid moment of pure laughter.</div>
+        </div>
+        <h2>Pure Joy</h2>
+      </div>
+
+      <div class="card" data-category="portraits">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/portrait4/600/400"
+            alt="Black and white portrait"
+          />
+          <span class="tag">Portraits</span>
+          <div class="overlay">
+            A black and white study of light and shadow.
+          </div>
+        </div>
+        <h2>Light and Shadow</h2>
+      </div>
+
+      <!-- Architecture -->
+      <div class="card" data-category="architecture">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/skyscraper/600/400"
+            alt="Skyscraper"
+          />
+          <span class="tag">Architecture</span>
+          <div class="overlay">A glass tower reaching into the clouds.</div>
+        </div>
+        <h2>Glass Tower</h2>
+      </div>
+
+      <div class="card" data-category="architecture">
+        <div class="image-box">
+          <img src="https://picsum.photos/seed/bridge/600/400" alt="Bridge" />
+          <span class="tag">Architecture</span>
+          <div class="overlay">A suspension bridge across the water.</div>
+        </div>
+        <h2>The Long Bridge</h2>
+      </div>
+
+      <div class="card" data-category="architecture">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/cathedral/600/400"
+            alt="Cathedral"
+          />
+          <span class="tag">Architecture</span>
+          <div class="overlay">Old stonework and soaring arches.</div>
+        </div>
+        <h2>Old Cathedral</h2>
+      </div>
+
+      <div class="card" data-category="architecture">
+        <div class="image-box">
+          <img
+            src="https://picsum.photos/seed/staircase/600/400"
+            alt="Spiral staircase"
+          />
+          <span class="tag">Architecture</span>
+          <div class="overlay">A spiral staircase seen from above.</div>
+        </div>
+        <h2>Spiral Stairs</h2>
+      </div>
+    </div>
+  </body>
+</html>
